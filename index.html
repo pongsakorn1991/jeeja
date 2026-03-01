@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 💗</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="overlay"></div>
+<canvas id="rain"></canvas>
+
+<div class="phone-container">
+  <div class="card login-card">
+
+    <h2>ใส่วันเกิดของจีจ้า</h2>
+
+    <!-- จุดรหัส -->
+    <div class="dots" id="dots"></div>
+
+    <!-- แป้นตัวเลข -->
+    <div class="keypad">
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <div></div>
+      <button class="key">0</button>
+      <button class="key delete">⌫</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="popup" class="popup">คุณจำผิดวันแล้ว 💔</div>
+
+<audio id="bgMusic" src="music/song.mp3" loop></audio>
+
+<script src="js/rain.js"></script>
+<script src="js/music.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

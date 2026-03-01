@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความรู้สึกวันปัจฉิม</title>
+<style>
+body{
+  margin:0;
+  font-family: 'Prompt', sans-serif;
+  background: linear-gradient(135deg,#ffb6d9,#bde0ff,#ffffff);
+  
+  color:rgb(0, 0, 0);
+  padding:20px;
+}
+
+.container{
+  max-width:700px;
+  margin:5px 0;
+  background-color: rgb(255, 255, 255);
+  padding:25px;
+  border-radius:15px;
+  backdrop-filter: #fff;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.question{
+  margin-bottom:25px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  padding:8px;
+  background:rgba(255,255,255,0.08);
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+label:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#e94560;
+  color:rgb(255, 255, 255);
+  font-size:16px;
+  cursor:pointer;
+  margin: 10px 0;
+}
+
+.result{
+  margin-top:30px;
+  padding:20px;
+  background:rgba(0,0,0,0.4);
+  border-radius:10px;
+  display:none;
+  line-height:1.8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>วันปัจฉิมของเรา</h1>
+</div>
+<form id="quizForm">
+
+
+<div class="container">
+  <div class="question">
+  <p>2. ถ้าได้ทำกิจกรรมด้วยกันอีกครั้ง อยากทำอะไร?</p>
+  <label><input type="radio" name="q2" value="A"> นั่งคุยกันยาวๆทั้งคืน</label>
+  <label><input type="radio" name="q2" value="B"> ถ่ายรูปเก็บความทรงจำให้เยอะที่สุด</label>
+  <label><input type="radio" name="q2" value="C"> เล่นมุกแซวกันเหมือนเดิม</label>
+  <label><input type="radio" name="q2" value="D"> แค่นั่งเงียบๆข้างกันก็พอ</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>3. ถ้าได้ไปเที่ยวด้วยกันอีกครั้ง อยากไปที่ไหน?</p>
+  <label><input type="radio" name="q3" value="A"> ทะเลตอนพระอาทิตย์ตก</label>
+  <label><input type="radio" name="q3" value="B"> ภูเขาอากาศเย็นๆ</label>
+  <label><input type="radio" name="q3" value="C"> ร้านประจำหลังเลิกเรียน</label>
+  <label><input type="radio" name="q3" value="D"> กลับไปเดินในโรงเรียนอีกครั้ง</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>4. ถ้าวันหนึ่งคิดถึงกันมากๆ จะทำอะไร?</p>
+  <label><input type="radio" name="q4" value="A"> โทรหาทันทีโดยไม่ลังเล</label>
+  <label><input type="radio" name="q4" value="B"> เปิดรูปเก่าๆดูแล้วยิ้ม</label>
+  <label><input type="radio" name="q4" value="C"> ทักไปแซวเล่นเหมือนเดิม</label>
+  <label><input type="radio" name="q4" value="D"> เก็บความคิดถึงไว้ในใจเงียบๆ</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>5. สิ่งที่กลัวที่สุดหลังจากแยกย้ายคืออะไร?</p>
+  <label><input type="radio" name="q5" value="A"> กลัวไม่ได้เจอกันอีก</label>
+  <label><input type="radio" name="q5" value="B"> กลัวความสนิทจะค่อยๆจางไป</label>
+  <label><input type="radio" name="q5" value="C"> กลัวต่างคนต่างยุ่งจนไม่คุยกัน</label>
+  <label><input type="radio" name="q5" value="D"> กลัวความคิดถึงจะมากเกินไป</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>6. ถ้าได้พูดประโยคหนึ่งจากใจจริง จะพูดว่าอะไร?</p>
+  <label><input type="radio" name="q6" value="A"> ขอบคุณที่อยู่ข้างกันมาตลอด</label>
+  <label><input type="radio" name="q6" value="B"> ไม่ว่าทางจะไกลแค่ไหน เรายังเป็นเพื่อนกัน</label>
+  <label><input type="radio" name="q6" value="C"> อย่าลืมเสียงหัวเราะของเรานะ</label>
+  <label><input type="radio" name="q6" value="D"> วันปัจฉิมไม่ใช่จุดจบ</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>7. ถ้าเจอกันอีกในอีก 5 ปี คุณจะทำอย่างไร?</p>
+  <label><input type="radio" name="q7" value="A"> วิ่งเข้าไปกอดแน่นๆ</label>
+  <label><input type="radio" name="q7" value="B"> ยิ้มกว้างแล้วเรียกชื่อทันที</label>
+  <label><input type="radio" name="q7" value="C"> แซวเหมือนเดิมเหมือนไม่เคยห่าง</label>
+  <label><input type="radio" name="q7" value="D"> น้ำตาซึมก่อนพูดอะไร</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>8. เวลาเห็นเพื่อนยิ้ม คุณรู้สึกอย่างไร?</p>
+  <label><input type="radio" name="q8" value="A"> รู้สึกดีมากแบบอธิบายไม่ถูก</label>
+  <label><input type="radio" name="q8" value="B"> อบอุ่นเหมือนบ้าน</label>
+  <label><input type="radio" name="q8" value="C"> อยากหัวเราะไปด้วย</label>
+  <label><input type="radio" name="q8" value="D"> กลัววันหนึ่งจะไม่ได้เห็นบ่อยๆ</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>9. ถ้าเพื่อนท้อในอนาคต คุณอยากเป็นแบบไหน?</p>
+  <label><input type="radio" name="q9" value="A"> คนแรกที่เขานึกถึง</label>
+  <label><input type="radio" name="q9" value="B"> คนที่คอยรับฟังเงียบๆ</label>
+  <label><input type="radio" name="q9" value="C"> คนที่ทำให้เขายิ้มได้</label>
+  <label><input type="radio" name="q9" value="D"> คนที่อยู่ข้างหลังแม้ไม่พูดอะไร</label>
+  </div>
+</div>
+<div class="container">
+  <div class="question">
+  <p>10. สุดท้ายนี้ ความรู้สึกจริงๆของคุณคือ?</p>
+  <label><input type="radio" name="q10" value="A"> ผูกพันมากเกินกว่าจะอธิบาย</label>
+  <label><input type="radio" name="q10" value="B"> อบอุ่นและขอบคุณทุกช่วงเวลา</label>
+  <label><input type="radio" name="q10" value="C"> เต็มไปด้วยเสียงหัวเราะและความสุข</label>
+  <label><input type="radio" name="q10" value="D"> เศร้าแต่ก็ภูมิใจที่ได้โตไปด้วยกัน</label>
+  </div>
+</div>
+<!-- เพิ่มคำถามแบบเดียวกันได้จนครบ 15 ข้อ -->
+<!-- เพื่อให้ข้อความยาวและลึก -->
+<div class="container">
+<button type="button" onclick="calculate()">ส่งคำตอบ</button>
+</div>
+</form>
+<div class="container">
+ <button onclick="window.location.href='memory.html'">
+  ไปหน้าถัดไป
+</button> <br>
+</div>
+<div class="result" id="resultText"></div>
+
+
+
+
+<script>
+function calculate(){
+  const answers = document.querySelectorAll("input[type=radio]:checked");
+
+  if(answers.length < 3){
+    alert("ตอบให้ครบก่อนนะ");
+    return;
+  }
+
+  let score = {A:0,B:0,C:0,D:0};
+
+  answers.forEach(ans=>{
+    score[ans.value]++;
+  });
+
+  let maxType = Object.keys(score).reduce((a,b)=>score[a]>score[b]?a:b);
+
+  let resultMessage = "";
+
+  if(maxType==="A"){
+    resultMessage = `
+เธอคือเพื่อนที่ผูกพันลึกมาก  
+ความทรงจำของ ม.6 ไม่ใช่แค่ช่วงเวลาหนึ่ง  
+แต่มันคือส่วนหนึ่งของหัวใจ  
+ถ้าได้เจอกันอีกครั้ง คงไม่ลังเลที่จะกอดแน่นๆ  
+และบอกว่า “ขอบคุณที่อยู่ข้างกันมาตลอด”  
+แม้เวลาจะพาเราไปคนละทาง  
+แต่ความรู้สึกนี้จะไม่เปลี่ยนเลย สุดท้ายคือชั้นไม่เห็นคำตอบของแกเลยทำมาอยากให้แกรู้ความรู้สึกตัวเองเฉยๆ ส่วนชั้น รักแกมากๆนะ`;
+  }
+
+  if(maxType==="B"){
+    resultMessage = `
+เธอคือเพื่อนที่อบอุ่น  
+อาจไม่แสดงออกมาก  
+แต่ทุกช่วงเวลาที่ผ่านมามีค่ามากจริงๆ  
+ถ้าได้เจอกันอีกครั้ง  
+แค่ได้ยิ้มให้กัน  
+ก็เหมือนได้ย้อนกลับไปเป็นเด็ก ม.6 อีกครั้ง สุดท้ายคือชั้นไม่เห็นคำตอบของแกเลยทำมาอยากให้แกรู้ความรู้สึกตัวเองเฉยๆ ส่วนชั้น รักแกมากๆนะ`;
+  }
+
+  if(maxType==="C"){
+    resultMessage = `
+เธอคือเพื่อนสายฮา  
+ความทรงจำเต็มไปด้วยเสียงหัวเราะ  
+ถึงจะไม่ได้พูดคำซึ้งๆ  
+แต่ทุกอย่างมันอยู่ในใจหมดแล้ว  
+ถ้าได้เจอกันอีก  
+คงแซวกันเหมือนเดิม  
+เพราะความสนิทไม่ต้องการคำอธิบาย สุดท้ายคือชั้นไม่เห็นคำตอบของแกเลยทำมาอยากให้แกรู้ความรู้สึกตัวเองเฉยๆ ส่วนชั้น รักแกมากๆนะ`;
+  }
+
+  if(maxType==="D"){
+    resultMessage = `
+เธอคือเพื่อนที่เก็บความรู้สึกเก่ง  
+ภายนอกอาจดูนิ่ง  
+แต่ข้างในเต็มไปด้วยความผูกพัน  
+วันปัจฉิมไม่ใช่แค่วันจบ  
+แต่มันคือวันที่หัวใจต้องยอมรับว่า  
+เรากำลังเติบโต  
+และต้องเดินต่อ  
+แม้จะคิดถึงแค่ไหนก็ตาม สุดท้ายคือชั้นไม่เห็นคำตอบของแกเลยทำมาอยากให้แกรู้ความรู้สึกตัวเองเฉยๆ ส่วนชั้น รักแกมากๆนะ`;
+  }
+
+  document.getElementById("resultText").style.display="block";
+  document.getElementById("resultText").innerHTML=resultMessage;
+}
+</script>
+<audio id="bgMusic" src="music/song.mp3" loop></audio>
+</body>
+</html>
